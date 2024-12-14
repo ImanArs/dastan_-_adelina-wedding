@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Cursive-some';
+  src: url(./fonts/Bella Script.otf);
+}
+@font-face {
+  font-family: dastan;
+  src: url(./fonts/Gamaleon.ttf);
+}
+@font-face {
+  font-family: 'Cursive-word';
+  src: url(./fonts/Bella Script CYR.otf);
+}
+@font-face {
+  font-family: 'Alistair';
+  src: url(./fonts/Alistair Signature.ttf);
+}
+@font-face {
+  font-family: 'Felidae';
+  src: url(./fonts/Felidae.ttf);
+}
+@font-face {
+  font-family: 'SnellBlack';
+  src: url(./fonts/snellroundhand_black.otf);
+}
+@font-face {
+  font-family: 'SnellBold';
+  src: url(./fonts/snellroundhand_bold.otf);
+}
+
+.cursive-font {
+  font-family: 'Cursive-some';
+}
+.cursive-word {
+  font-family: 'Cursive-word';
+}
+.alistair {
+  font-family: 'Cursive-word';
+}
+.playfair {
+  font-family: "Playfair Display", serif;
+}
+
+.greatVibes {
+  font-family: "Great Vibes", serif;
+}
+.felidae {
+  font-family: "Felidae";
+}
+.gamelon {
+  font-family: dastan;
+}
+.snellBold {
+  font-family: 'SnellBold';
+}
