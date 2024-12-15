@@ -27,12 +27,12 @@ export const Location = () => {
           <h2 className="playfair text-[54px] mt-[40px] felidae">Ресторан "Ата"</h2>
 
           <div className="flex flex-col gap-5 mb-[100px]">
-            <p className=" snellBold text-[24px] tracking-[4px] leading-5 mt-[140px]">
-              Мы выбрали это место для создания Незабываемого и романтического настроения
+            <p className=" snellBold text-[22px] tracking-[4px] leading-5 mt-[140px]">
+              это место для создания Незабываемого и романтического настроения
             </p>
             <div className="h-[1px] w-[150px] m-auto bg-white"></div>
-            <div>
-            <a href="https://2gis.kg/bishkek/firm/70000001087638363?m=74.643567%2C42.821717%2F15.97" className="z-20">
+            <div className="z-20">
+            <a href="https://2gis.kg/bishkek/firm/70000001087638363?m=74.643567%2C42.821717%2F15.97" target="_blank" className="z-20">
               <button className="playfair uppercase bg-transparent border py-3 px-6 rounded-md font-medium transition-all max-w-[300px] w-full">Улица Мадиева 22Б</button>
             </a>
             </div>
