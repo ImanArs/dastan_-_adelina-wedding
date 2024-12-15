@@ -32,7 +32,7 @@ export const Location = () => {
             </p>
             <div className="h-[1px] w-[150px] m-auto bg-white"></div>
             <div>
-            <a href="https://2gis.kg/bishkek/firm/70000001087638363?m=74.643567%2C42.821717%2F15.97">
+            <a href="https://2gis.kg/bishkek/firm/70000001087638363?m=74.643567%2C42.821717%2F15.97" className="z-20">
               <button className="playfair uppercase bg-transparent border py-3 px-6 rounded-md font-medium transition-all max-w-[300px] w-full">Улица Мадиева 22Б</button>
             </a>
             </div>
