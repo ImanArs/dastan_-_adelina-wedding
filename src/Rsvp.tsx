@@ -9,7 +9,6 @@ export const Rsvp = () => {
 
   const [formSubmitted, setFormSubmitted] = useState(false)
 
-  // Загрузка данных из localStorage при первом рендере
   useEffect(() => {
     const savedData = localStorage.getItem('rsvpForm')
     if (savedData) {
@@ -27,11 +26,10 @@ export const Rsvp = () => {
     e.preventDefault()
     console.log('Form Data Submitted:', formData)
 
-    // Сохранение данных в localStorage
     localStorage.setItem('rsvpForm', JSON.stringify(formData))
     setFormSubmitted(true)
 
-    submitGuest(formData) // Вызов вашей функции для отправки данных
+    submitGuest(formData)
   }
 
   return (
