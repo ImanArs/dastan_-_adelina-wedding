@@ -1,48 +1,55 @@
-import React, { useState, useEffect } from 'react'
-import { submitGuest } from './service/submitGuests'
+import React, { useState, useEffect } from "react";
+import { submitGuest } from "./service/submitGuests";
 
 export const Rsvp = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    phone_number: '',
-  })
+    name: "",
+    phone_number: "",
+  });
 
-  const [formSubmitted, setFormSubmitted] = useState(false)
+  const [formSubmitted, setFormSubmitted] = useState(false);
 
   useEffect(() => {
-    const savedData = localStorage.getItem('rsvpForm')
+    const savedData = localStorage.getItem("rsvpForm");
     if (savedData) {
-      setFormData(JSON.parse(savedData))
-      setFormSubmitted(true)
+      setFormData(JSON.parse(savedData));
+      setFormSubmitted(true);
     }
-  }, [])
+  }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target
-    setFormData((prev) => ({ ...prev, [name]: value }))
-  }
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    console.log('Form Data Submitted:', formData)
+    e.preventDefault();
+    console.log("Form Data Submitted:", formData);
 
-    localStorage.setItem('rsvpForm', JSON.stringify(formData))
-    setFormSubmitted(true)
+    localStorage.setItem("rsvpForm", JSON.stringify(formData));
+    setFormSubmitted(true);
 
-    submitGuest(formData)
-  }
+    submitGuest(formData);
+  };
 
   return (
     <div className="w-full bg-[#202020] text-white text-center py-10 px-5 playfair pb-[200px] relative">
-      <h2 className="uppercase text-4xl font-bold mb-4 felidae tracking-[4px]">Registration</h2>
-      <p className="mb-8 text-[22px] tracking-[1px] snellBold font-[100]">Подтвердите свое присутствие</p>
+      <h2 className="uppercase text-4xl font-bold mb-4 felidae tracking-[4px]">
+        Registration
+      </h2>
+      <p className="mb-8 text-[22px] tracking-[1px] snellBold font-[100]">
+        Подтвердите свое присутствие
+      </p>
 
       {formSubmitted ? (
         <div className="text-xl text-green-400 snellBold">
           спасибо за подтверждение
         </div>
       ) : (
-        <form className="max-w-md mx-auto flex flex-col gap-6" onSubmit={handleSubmit}>
+        <form
+          className="max-w-md mx-auto flex flex-col gap-6"
+          onSubmit={handleSubmit}
+        >
           <input
             className="p-3 rounded-[2px] bg-[#202020] text-white placeholder-gray-400 border"
             type="text"
@@ -56,7 +63,7 @@ export const Rsvp = () => {
 
           <input
             className="p-3 rounded-[2px] bg-[#202020] text-white placeholder-gray-400 border"
-            type="number"
+            type="text"
             id="phone_number"
             name="phone_number"
             placeholder="Ваш номер телефона"
@@ -79,5 +86,5 @@ export const Rsvp = () => {
         RSVP
       </h2>
     </div>
-  )
-}
+  );
+};
